@@ -1,7 +1,7 @@
 use tokio::net::UdpSocket;
 use std::io;
 
-#[tokio::main]
+[tokio::main]
 async fn main() -> io::Result<()> {
     let sock = UdpSocket::bind("0.0.0.0:8080").await?;
     let mut buf = [0; 1024];
