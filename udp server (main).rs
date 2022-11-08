@@ -5,7 +5,7 @@ use std::io;
 
 fn listen(socket: &net::UdpSocket) -> Vec<u8> {
 
-    /// TODO(alex): Create constants for these buffer size values.
+    /// will soon create constants for these buffer size values.
     let mut buf: [u8; 20] = [0; 20];
     let number_of_bytes: usize = 0;
     let mut result: Vec<u8> = Vec::new();
