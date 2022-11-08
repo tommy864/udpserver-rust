@@ -1,8 +1,9 @@
-# udp-rust-server
-learning rust so just posting a little project i made 
+versatile udp server 
 
-by no means is this meant to be impressive, i am open to **constructive** criticism
+rust being the first language i have dedicated time to this will see improvement as time goes on.
+Will be adding a detailed config file soon as well as improving peripharal pieces to the code.
 
-My discord is Tommy#1337
 
+contact information:
+discord: Tommy#6490
 
