@@ -179,7 +179,7 @@ fn main() {
     host_config.local_host = set_host_parameters(&host_config.local_ip, &host_config.local_port);
     host_config.remote_host = set_host_parameters(&host_config.remote_ip, &host_config.remote_port);
 
-    /// TODO(alex): Create a constant for default string capacity values.
+    /// will create a constant for default string capacity values.
     let mut message = String::with_capacity(128);
 
     loop {
