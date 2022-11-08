@@ -39,7 +39,6 @@ fn init_host(host: &str) -> net::UdpSocket {
 
     println!("initializing host: {:?}", host);
     let socket = net::UdpSocket::bind(host).expect("failed to bind host socket");
-    /// TODO(alex): Create a constant for this duration timeout value.
     let duration = std::time::Duration::new(1, 0);
     let dur = std::option::Option::Some(duration);
     let _res = socket.set_read_timeout(dur).expect("failed to set timeout");
@@ -103,7 +102,7 @@ fn identify_comand(command: &str, data: &str) -> CommandInput {
 
 fn read_console() -> CommandInput {
 
-    /// TODO(alex): Create a constant for default string capacity values.
+    /// will Create a constant for default string capacity values.
     let mut input = String::with_capacity(25);
     match io::stdin().read_line(&mut input) {
         Ok(bytes_read) => {
@@ -124,7 +123,7 @@ fn read_console() -> CommandInput {
 
 fn set_host_parameters(ip: &str, port: &str) -> String {
 
-    /// TODO(alex): Create a constant for default string capacity values.
+    /// will create a constant for default string capacity values.
     let mut host = String::with_capacity(128);
     host.push_str(ip);
     host.push_str(":");
@@ -164,19 +163,15 @@ fn build_config(cmd_input: CommandInput, host_config: &mut HostConfig) {
 
 fn main() {
 
-    /// TODO(alex): Move these calls into command based sections.
-    // let message = String::from("hello");
-    // let msg_bytes = message.into_bytes();
-    // println!("sending message: {:?}", msg_bytes);
 
     let mut host_config = HostConfig {
         local_ip: "127.0.0.1".to_owned(),
         local_port: "7777".to_owned(),
-        /// TODO(alex): Create a constant for default string capacity values.
+        /// will be adding a constant for default string capacity values!
         local_host: String::with_capacity(128),
         remote_ip: "127.0.0.1".to_owned(),
         remote_port: "8888".to_owned(),
-        /// TODO(alex): Create a constant for default string capacity values.
+        /// new def string value
         remote_host: String::with_capacity(128),
     };
     let default_msg = "hello world";
@@ -214,7 +209,7 @@ fn main() {
     std::thread::sleep(sleep_time);
 
     loop {
-        // TODO(alex): Move these calls into command based sections.
+        // will move these calls into command based sections.
         let received_msg = listen(&socket);
         send(&socket, &host_config.remote_host, &msg_bytes);
         // send(&socket, &client_arg, &msg_bytes);
