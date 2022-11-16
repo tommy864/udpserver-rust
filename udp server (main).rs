@@ -204,7 +204,6 @@ fn main() {
     println!("socket: {:?}", socket);
     let msg_bytes = message.into_bytes();
 
-    /// TODO(alex): Remove this sleep timer.
     let sleep_time = std::time::Duration::from_secs(1);
     std::thread::sleep(sleep_time);
 
