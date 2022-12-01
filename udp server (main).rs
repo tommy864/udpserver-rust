@@ -171,7 +171,8 @@ fn main() {
         local_host: String::with_capacity(128),
         remote_ip: "127.0.0.1".to_owned(),
         remote_port: "8888".to_owned(),
-        /// new def string value
+        /// new def string value 
+        //new ports can be implemented 
         remote_host: String::with_capacity(128),
     };
     let default_msg = "hello world";
@@ -214,6 +215,7 @@ fn main() {
         // send(&socket, &client_arg, &msg_bytes);
     }
 }
+
 
 
 
