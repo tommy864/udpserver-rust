@@ -1,4 +1,3 @@
-
 use std::net;
 use std::env;
 use std::io;
@@ -171,8 +170,7 @@ fn main() {
         local_host: String::with_capacity(128),
         remote_ip: "127.0.0.1".to_owned(),
         remote_port: "8888".to_owned(),
-        /// new def string value 
-        //new ports can be implemented 
+        /// new def string value
         remote_host: String::with_capacity(128),
     };
     let default_msg = "hello world";
@@ -212,10 +210,9 @@ fn main() {
         // will move these calls into command based sections.
         let received_msg = listen(&socket);
         send(&socket, &host_config.remote_host, &msg_bytes);
-        // send(&socket, &client_arg, &msg_bytes);
+       
     }
 }
-
 
 
 
